@@ -4,15 +4,19 @@ import android.content.Context
 import android.content.ContextWrapper
 
 
-internal inline fun <reified T> findOwner(context: Context): T? {
-    var innerContext = context
+internal fun Context.contextWrappers(): Sequence<Context> = sequence {
+    var innerContext = this@contextWrappers
+
     while (innerContext is ContextWrapper) {
-        if (innerContext is T) {
-            return innerContext
-        }
+        yield(innerContext)
         innerContext = innerContext.baseContext
     }
-    return null
+}
+
+internal inline fun <reified T> findOwner(context: Context): T? {
+    return context.contextWrappers()
+        .filterIsInstance<T>()
+        .singleOrNull()
 }
 
 @PublishedApi

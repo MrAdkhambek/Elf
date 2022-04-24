@@ -6,4 +6,4 @@ import dagger.hilt.android.components.ActivityComponent
 
 @ComposableScoped
 @DefineComponent(parent = ActivityComponent::class)
-interface ComposableComponent
+public interface ComposableComponent

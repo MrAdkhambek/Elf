@@ -4,6 +4,6 @@ import dagger.hilt.DefineComponent
 
 
 @DefineComponent.Builder
-interface ComposableComponentBuilder {
+public interface ComposableComponentBuilder {
     fun build(): ComposableComponent
 }

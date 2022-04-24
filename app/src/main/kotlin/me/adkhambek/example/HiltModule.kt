@@ -4,8 +4,10 @@ import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
 import dagger.multibindings.IntoMap
+import me.adkhambek.elf.container.MicroContainer
 import me.adkhambek.elf.container.MicroContainerFactory
 import me.adkhambek.elf.container.MicroContainerFactoryKey
+import me.adkhambek.elf.container.MicroContainerKey
 import me.adkhambek.elf.hilt.composable.ComposableComponent
 
 
@@ -19,4 +21,12 @@ interface HiltModule {
     fun bindHiltDetailsScreenModelFactory(
         hiltDetailsScreenModelFactory: HiltMicroContainer.Factory
     ): MicroContainerFactory
+
+
+    @Binds
+    @IntoMap
+    @MicroContainerKey(TextMicroContainer::class)
+    fun bindTextMicroContainer(
+        textMicroContainer: TextMicroContainer
+    ): MicroContainer
 }

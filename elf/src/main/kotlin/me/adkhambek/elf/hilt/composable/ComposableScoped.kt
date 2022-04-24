@@ -4,5 +4,5 @@ import javax.inject.Scope
 
 
 @Scope
-annotation class ComposableScoped
+public annotation class ComposableScoped
 
