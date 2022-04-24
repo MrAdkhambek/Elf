@@ -1,4 +1,4 @@
-package me.adkhambek.elf.hilt.composable
+package me.adkhambek.elf.hilt
 
 import dagger.hilt.DefineComponent
 import dagger.hilt.android.components.ActivityComponent

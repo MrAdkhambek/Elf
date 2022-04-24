@@ -1,4 +1,4 @@
-package me.adkhambek.elf.hilt.composable
+package me.adkhambek.elf.hilt
 
 import javax.inject.Scope
 

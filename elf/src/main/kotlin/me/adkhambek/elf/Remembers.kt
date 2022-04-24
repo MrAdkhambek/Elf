@@ -6,7 +6,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
 import dagger.hilt.EntryPoints
 import dagger.hilt.android.EntryPointAccessors
-import me.adkhambek.elf.hilt.composable.ComposableComponentBuilderEntryPoint
+import me.adkhambek.elf.hilt.ComposableComponentBuilderEntryPoint
 
 
 @Composable
