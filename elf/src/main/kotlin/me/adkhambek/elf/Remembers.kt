@@ -21,7 +21,7 @@ public inline fun <reified T : Any> rememberSingletonEntryPoint(): T {
 public inline fun <reified T : Any> rememberActivityEntryPoint(): T {
     val context = LocalContext.current
     return remember {
-        EntryPointAccessors.fromApplication(context.componentActivity, T::class.java)
+        EntryPointAccessors.fromActivity(context.componentActivity, T::class.java)
     }
 }
 

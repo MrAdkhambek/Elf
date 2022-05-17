@@ -14,6 +14,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "example"
-include ':app'
-include ':elf'
+//rootProject.name = "elf"
+include(":app")
+include(":elf")

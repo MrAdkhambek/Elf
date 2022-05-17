@@ -8,6 +8,5 @@ import dagger.hilt.android.components.ActivityComponent
 @EntryPoint
 @InstallIn(ActivityComponent::class)
 public interface ComposableComponentBuilderEntryPoint {
-
-    val componentBuilder: ComposableComponentBuilder
+    public val componentBuilder: ComposableComponent.Builder
 }
